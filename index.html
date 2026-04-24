@@ -123,41 +123,170 @@
   .company-banner {
     background: #f8faf9;
     border-left: 5px solid #1a5c3b;
-    padding: 32px 40px;
+    padding: 40px 48px 36px;
     margin: 0;
   }
-  .company-banner h2 {
-    font-size: 13px;
-    color: #1a5c3b;
+  .company-banner .cb-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .company-banner .cb-header h2 {
+    font-size: 11px;
+    color: #999;
     letter-spacing: 3px;
-    margin-bottom: 16px;
     font-weight: bold;
+    margin: 0;
   }
   .company-banner .company-name {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     color: #0f3d23;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     letter-spacing: 1px;
   }
-  .company-banner p {
-    font-size: 13px;
-    color: #555;
-    line-height: 1.9;
+  .company-banner .cb-desc {
+    font-size: 13.5px;
+    color: #444;
+    line-height: 1.95;
+    margin-bottom: 6px;
   }
-  .company-tags {
+  .company-banner .cb-desc em {
+    color: #1a5c3b;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .company-banner .cb-slogan {
+    font-size: 14px;
+    color: #1a5c3b;
+    font-weight: bold;
+    line-height: 2;
+    margin: 10px 0 20px;
+    padding-left: 14px;
+    border-left: 3px solid #2d7a50;
+    background: linear-gradient(90deg, #e8f3ed 0%, transparent 100%);
+    padding: 10px 16px;
+    border-radius: 0 4px 4px 0;
+  }
+  /* 服务领域 */
+  .cb-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 24px 0;
+  }
+  .cb-service-card {
+    background: #fff;
+    border: 1px solid #e0ebe5;
+    border-radius: 6px;
+    padding: 20px 18px 16px;
+    position: relative;
+    transition: box-shadow .2s;
+  }
+  .cb-service-card:hover {
+    box-shadow: 0 4px 16px rgba(26,92,59,0.08);
+  }
+  .cb-service-card .sc-icon {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .cb-service-card .sc-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #0f3d23;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .cb-service-card .sc-list {
+    list-style: none;
+    padding: 0;
+  }
+  .cb-service-card .sc-list li {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.85;
+    padding-left: 14px;
+    position: relative;
+  }
+  .cb-service-card .sc-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #2d7a50;
+  }
+  .cb-service-card .sc-note {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #1a5c3b;
+    font-weight: bold;
+    background: #e8f3ed;
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 2px;
+  }
+  /* 底部数据条 */
+  .cb-stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px dashed #d5e3db;
+  }
+  .cb-stats .stat {
+    text-align: center;
+    flex: 1;
+  }
+  .cb-stats .stat-val {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a5c3b;
+  }
+  .cb-stats .stat-label {
+    font-size: 11px;
+    color: #888;
+    margin-top: 2px;
+  }
+  /* 合作品牌 */
+  .cb-partners {
+    margin-top: 22px;
+  }
+  .cb-partners .cp-title {
+    font-size: 12px;
+    color: #888;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+  .cb-partners .cp-list {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 16px;
   }
-  .company-tags span {
-    background: #e8f3ed;
-    color: #1a5c3b;
+  .cb-partners .cp-list span {
+    background: #fff;
+    border: 1px solid #e0ebe5;
+    color: #555;
     font-size: 12px;
-    padding: 4px 12px;
-    border-radius: 2px;
-    font-weight: bold;
+    padding: 4px 14px;
+    border-radius: 3px;
+  }
+  .cb-role-note {
+    margin-top: 18px;
+    font-size: 12.5px;
+    color: #666;
+    line-height: 1.85;
+    padding: 12px 16px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #e8f3ed;
+  }
+  .cb-role-note strong {
+    color: #1a5c3b;
   }
 
   /* ===== 正文区域 ===== */
@@ -686,23 +815,99 @@
 
   <!-- ===== 出品公司介绍 ===== -->
   <div class="company-banner">
-    <h2>OUT PRODUCER · 策划出品方</h2>
+    <div class="cb-header">
+      <h2>OUT PRODUCER · 策划出品方</h2>
+    </div>
     <div class="company-name">四川丰火传媒有限公司</div>
-    <p>
-      四川丰火传媒有限公司（Fengho Media）是立足成都、深耕西南的品牌营销与连锁餐饮运营服务机构。公司以"品效合一"为核心理念，深度聚焦连锁餐饮、消费品牌及文旅业态的从0到1孵化与规模化增长，具备品牌策划、VI设计协同、线上运营、私域流量搭建、加盟管理SOP设计等全链路服务能力。
+    <p class="cb-desc">
+      总部位于成都，是一家专注于<em>品牌全案营销、文旅IP打造与持续运营</em>的全案媒体公司。年营业流水超<em>1,500万元</em>，团队深耕<em>餐饮连锁、商业地产、文旅景区</em>三大领域，具备从战略规划到落地执行的完整服务能力。
     </p>
-    <p style="margin-top:8px;">
-      在本项目中，丰火传媒以营销合作方身份深度参与，负责品牌策划顶层设计、美团/大众点评/小红书等主流平台连锁体系搭建、线上运营全链路推进及加盟扩张流量体系建设，为相如满庭芳品牌的从0到1提供系统性市场化支撑。
-    </p>
-    <div class="company-tags">
-      <span>品牌策划</span>
-      <span>连锁运营</span>
-      <span>线上营销</span>
-      <span>美团/点评体系</span>
-      <span>小红书种草</span>
-      <span>加盟管理SOP</span>
-      <span>供应链对接</span>
-      <span>投流推广</span>
+    <div class="cb-slogan">
+      我们不只是"做活动""做推广"，更擅长将一个地方的文化资源转化为可持续的市场化项目——<br>
+      让流量变留量，让打卡变口碑，让一次消费变长期产业。
+    </div>
+
+    <!-- 三大服务领域 -->
+    <div class="cb-services">
+      <!-- 小红书 -->
+      <div class="cb-service-card">
+        <div class="sc-icon">📕</div>
+        <div class="sc-title">小红书 · 全案运营体系</div>
+        <ul class="sc-list">
+          <li>蓝V账号代运营：从0到1搭建品牌号矩阵，笔记策划、发布排期、粉丝互动、数据复盘一站式托管</li>
+          <li>KOL/KOC金字塔式种草：头部破圈 + 腰部测评 + 素人口碑铺量</li>
+          <li>搜索SEO优化：关键词布局 + 话题矩阵，抢占品类搜索排名首位</li>
+          <li>直播带货：品牌自播 + 达人专场，品效合一转化闭环</li>
+        </ul>
+        <div class="sc-note">已服务餐饮 / 文旅品牌 50+</div>
+      </div>
+      <!-- 抖音 -->
+      <div class="cb-service-card">
+        <div class="sc-icon">🎵</div>
+        <div class="sc-title">抖音 · 全链路营销</div>
+        <ul class="sc-list">
+          <li>短视频内容生产：自有专业拍摄团队，核心成员曾为北京海底捞、北京大董餐饮集团提供视频制作服务，影视级品质保障</li>
+          <li>品牌宣传大片：城市形象片、景区宣传片、品牌故事片</li>
+          <li>本地生活团购：套餐设计、POI优化、达人探店、流量采买</li>
+          <li>DOU+/千川投放：精细化投流策略，ROI可控</li>
+        </ul>
+        <div class="sc-note">影视级视频制作团队</div>
+      </div>
+      <!-- 大众点评 -->
+      <div class="cb-service-card">
+        <div class="sc-icon">📍</div>
+        <div class="sc-title">大众点评 · 必榜全案</div>
+        <ul class="sc-list">
+          <li>必吃榜冲刺：门店评分提升（4.8→4.9+）、好评率优化、差评管理、榜单规则拆解精准冲榜</li>
+          <li>必玩榜 / 必住榜：文旅景区与住宿类目榜单运营</li>
+          <li>商户通运营：店铺装修、套餐设计、评价回复、会员体系搭建</li>
+          <li>数据化管理：同时运营351家门店SaaS化看板，实时监控GMV、退款率、ROS等核心指标</li>
+        </ul>
+        <div class="sc-note">同时运营 351 家点评门店</div>
+      </div>
+    </div>
+
+    <!-- 底部数据 -->
+    <div class="cb-stats">
+      <div class="stat">
+        <div class="stat-val">1,500万+</div>
+        <div class="stat-label">年营业流水</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">351家</div>
+        <div class="stat-label">年运营门店数</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">50+</div>
+        <div class="stat-label">已服务品牌</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">全案</div>
+        <div class="stat-label">覆盖全链路</div>
+      </div>
+    </div>
+
+    <!-- 合作品牌 -->
+    <div class="cb-partners">
+      <div class="cp-title">PARTNERS &amp; PROJECTS · 部分合作品牌 / 项目</div>
+      <div class="cp-list">
+        <span>大院河·仙鱼莊</span>
+        <span>蜀镇老火锅</span>
+        <span>享月汤皇</span>
+        <span>京祥和轩铜锅涮肉</span>
+        <span>都氏家 DUSJOY</span>
+        <span>新柯瑞集团</span>
+        <span>麓湖 CPI 岛</span>
+        <span>古滇名城</span>
+        <span>四平铁东非遗展示馆</span>
+        <span>洛带水龙节</span>
+      </div>
+    </div>
+
+    <!-- 项目角色 -->
+    <div class="cb-role-note">
+      <strong>在本项目中：</strong>丰火传媒以营销合作方身份深度参与，负责品牌策划顶层设计、美团/大众点评/小红书等主流平台连锁体系搭建、线上运营全链路推进及加盟扩张流量体系建设，为相如满庭芳品牌的从0到1提供系统性市场化支撑。<br>
+      <strong style="font-size:11px;color:#999;">全案覆盖 · 自有团队 · 端到端交付 · 年流水1,500万+ · 年操盘351家门店运营经验</strong>
     </div>
   </div>
 
