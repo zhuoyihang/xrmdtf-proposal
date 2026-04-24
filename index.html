@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>相如满庭芳养生茶火锅 · 品牌启动商业企划书</title>
+<style>
+  /* ===== 全局 ===== */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
+    background: #f5f5f0;
+    color: #2c2c2c;
+    font-size: 14px;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  /* ===== 水印 ===== */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 120px,
+      rgba(0,0,0,0.025) 120px,
+      rgba(0,0,0,0.025) 121px
+    );
+  }
+  .watermark-layer {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    overflow: hidden;
+  }
+  .watermark-layer span {
+    position: absolute;
+    font-size: 13px;
+    color: rgba(26, 92, 59, 0.09);
+    font-weight: bold;
+    white-space: nowrap;
+    transform: rotate(-40deg);
+    letter-spacing: 2px;
+    user-select: none;
+  }
+
+  /* ===== 页面容器 ===== */
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+  }
+
+  /* ===== 封面 ===== */
+  .cover {
+    background: linear-gradient(160deg, #0f3d23 0%, #1a5c3b 45%, #2d7a50 100%);
+    padding: 80px 60px 60px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::after {
+    content: "茶";
+    position: absolute;
+    right: -30px; bottom: -60px;
+    font-size: 320px;
+    color: rgba(255,255,255,0.04);
+    font-family: serif;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .cover-tag {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 4px 14px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 32px;
+  }
+  .cover h1 {
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+  }
+  .cover .sub-brand {
+    font-size: 18px;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
+  .cover-divider {
+    width: 60px;
+    height: 3px;
+    background: rgba(255,255,255,0.5);
+    margin: 28px 0;
+  }
+  .cover-desc {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 1px;
+    line-height: 2;
+  }
+  .cover-meta {
+    display: flex;
+    gap: 40px;
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .cover-meta-item { font-size: 12px; color: rgba(255,255,255,0.6); }
+  .cover-meta-item strong { display: block; font-size: 14px; color: #fff; margin-bottom: 2px; }
+
+  /* ===== 公司介绍横幅 ===== */
+  .company-banner {
+    background: #f8faf9;
+    border-left: 5px solid #1a5c3b;
+    padding: 32px 40px;
+    margin: 0;
+  }
+  .company-banner h2 {
+    font-size: 13px;
+    color: #1a5c3b;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  .company-banner .company-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0f3d23;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+  .company-banner p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.9;
+  }
+  .company-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .company-tags span {
+    background: #e8f3ed;
+    color: #1a5c3b;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 2px;
+    font-weight: bold;
+  }
+
+  /* ===== 正文区域 ===== */
+  .content { padding: 0 40px 60px; }
+
+  /* ===== 章节标题 ===== */
+  .section {
+    margin-top: 48px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e8f3ed;
+  }
+  .section-num {
+    width: 40px; height: 40px;
+    background: #1a5c3b;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 14px;
+    font-family: serif;
+  }
+  .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0f3d23;
+    letter-spacing: 1px;
+  }
+  .section-title small {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-top: 2px;
+  }
+
+  /* ===== 小节标题 ===== */
+  .subsection {
+    margin-top: 28px;
+    margin-bottom: 14px;
+  }
+  .subsection h3 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a5c3b;
+    padding-left: 10px;
+    border-left: 3px solid #2d7a50;
+    line-height: 1.4;
+  }
+
+  /* ===== 信息表格 ===== */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
+  .info-table th {
+    background: #1a5c3b;
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: bold;
+    width: 140px;
+  }
+  .info-table td {
+    padding: 10px 14px;
+    border: 1px solid #dde;
+    color: #333;
+    background: #fff;
+  }
+  .info-table tr:nth-child(even) td { background: #fafafa; }
+
+  /* ===== 三列分析卡片 ===== */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .card-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .card {
+    border: 1px solid #e0ece6;
+    border-top: 3px solid #1a5c3b;
+    padding: 18px;
+    background: #fff;
+  }
+  .card .card-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #1a5c3b;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .card ul {
+    padding-left: 16px;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .card p { font-size: 13px; color: #555; line-height: 1.8; }
+  .card-accent { border-top-color: #d4a017; }
+  .card-accent .card-title { color: #d4a017; }
+  .card-warning { border-top-color: #c0392b; }
+  .card-warning .card-title { color: #c0392b; }
+
+  /* ===== 策略步骤条 ===== */
+  .steps {
+    display: flex;
+    gap: 0;
+    margin-top: 16px;
+    overflow: hidden;
+    border: 1px solid #dde;
+  }
+  .step-item {
+    flex: 1;
+    padding: 20px 16px;
+    background: #fff;
+    border-right: 1px solid #dde;
+    position: relative;
+  }
+  .step-item:last-child { border-right: none; }
+  .step-item::after {
+    content: "▶";
+    position: absolute;
+    right: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1a5c3b;
+    font-size: 12px;
+    z-index: 2;
+  }
+  .step-item:last-child::after { display: none; }
+  .step-num {
+    width: 28px; height: 28px;
+    background: #1a5c3b;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 50%;
+  }
+  .step-item h4 { font-size: 13px; font-weight: bold; color: #0f3d23; margin-bottom: 6px; }
+  .step-item p { font-size: 12px; color: #666; line-height: 1.6; }
+
+  /* ===== 路径对比 ===== */
+  .path-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .path-card {
+    padding: 20px;
+    border: 1px solid #dde;
+    background: #fff;
+    position: relative;
+  }
+  .path-card.recommend { border: 2px solid #1a5c3b; }
+  .path-card .recommend-badge {
+    position: absolute;
+    top: -1px; right: 12px;
+    background: #1a5c3b;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 10px;
+    font-weight: bold;
+  }
+  .path-card h4 { font-size: 14px; font-weight: bold; color: #0f3d23; margin-bottom: 12px; }
+  .path-card ul { padding-left: 16px; font-size: 13px; color: #555; line-height: 1.8; }
+  .path-card p { font-size: 13px; color: #555; line-height: 1.8; margin-top: 8px; }
+
+  /* ===== 盈利模式卡片 ===== */
+  .profit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .profit-card {
+    background: linear-gradient(135deg, #0f3d23, #1a5c3b);
+    color: #fff;
+    padding: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .profit-card::before {
+    content: attr(data-icon);
+    position: absolute;
+    right: 12px; bottom: -8px;
+    font-size: 52px;
+    opacity: 0.12;
+    line-height: 1;
+  }
+  .profit-card.light {
+    background: #f0f8f3;
+    color: #0f3d23;
+    border: 1px solid #c5e0d0;
+  }
+  .profit-card.light .profit-title { color: #1a5c3b; }
+  .profit-card.light .profit-amount { color: #0f3d23; }
+  .profit-card.light ul { color: #444; }
+  .profit-title { font-size: 13px; letter-spacing: 1px; opacity: 0.85; margin-bottom: 6px; }
+  .profit-amount { font-size: 22px; font-weight: bold; margin-bottom: 12px; }
+  .profit-card ul { padding-left: 16px; font-size: 12px; line-height: 1.8; opacity: 0.9; }
+
+  /* ===== 数据亮点行 ===== */
+  .highlight-row {
+    display: flex;
+    gap: 0;
+    background: #1a5c3b;
+    color: #fff;
+    margin: 24px 0;
+    overflow: hidden;
+  }
+  .highlight-item {
+    flex: 1;
+    padding: 20px 18px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+  }
+  .highlight-item:last-child { border-right: none; }
+  .highlight-item .hl-num {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 4px;
+    font-family: serif;
+  }
+  .highlight-item .hl-label { font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 1px; }
+
+  /* ===== 动作清单表格 ===== */
+  .action-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 16px;
+  }
+  .action-table th {
+    background: #1a5c3b;
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .action-table td {
+    padding: 10px 12px;
+    border: 1px solid #dde;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  .action-table tr:nth-child(even) td { background: #f8fbf9; }
+  .priority-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 2px;
+  }
+  .p-high { background: #fde8e8; color: #c0392b; }
+  .p-medium { background: #fef3cd; color: #b8860b; }
+  .p-highest { background: #e8f3ed; color: #1a5c3b; }
+
+  /* ===== 甘特图 ===== */
+  .gantt-wrap {
+    margin-top: 16px;
+    overflow-x: auto;
+  }
+  .gantt-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    min-width: 700px;
+  }
+  .gantt-table th {
+    background: #0f3d23;
+    color: #fff;
+    padding: 8px 6px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 11px;
+    border: 1px solid #1a5c3b;
+    white-space: nowrap;
+  }
+  .gantt-table th.task-col {
+    text-align: left;
+    padding-left: 12px;
+    width: 200px;
+  }
+  .gantt-table td {
+    padding: 7px 6px;
+    border: 1px solid #e5ede8;
+    text-align: center;
+    font-size: 11px;
+  }
+  .gantt-table td.task-name {
+    text-align: left;
+    padding-left: 12px;
+    background: #f8fbf9;
+    font-weight: bold;
+    color: #0f3d23;
+    white-space: nowrap;
+  }
+  .gantt-table tr:nth-child(even) td { background: #fbfdfb; }
+  .gantt-table tr:nth-child(even) td.task-name { background: #f0f8f3; }
+  .gantt-bar {
+    display: inline-block;
+    width: 100%;
+    height: 18px;
+    border-radius: 2px;
+    position: relative;
+  }
+  .gantt-bar.g1 { background: #1a5c3b; }
+  .gantt-bar.g2 { background: #2d7a50; }
+  .gantt-bar.g3 { background: #4a9e6e; }
+  .gantt-bar.g4 { background: #6db890; }
+  .gantt-bar.g5 { background: #d4a017; }
+  .gantt-bar.g6 { background: #e8c355; }
+  .gantt-bar.gkey {
+    background: #c0392b;
+    height: 18px;
+  }
+  .month-header {
+    background: #1a5c3b !important;
+    color: #fff;
+    font-size: 12px !important;
+    font-weight: bold;
+  }
+  .week-header {
+    background: #2d7a50 !important;
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 10px !important;
+  }
+  .phase-row td {
+    background: #e8f3ed !important;
+    font-weight: bold;
+    color: #0f3d23;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+  /* ===== 引用块 ===== */
+  .blockquote {
+    background: #f0f8f3;
+    border-left: 4px solid #1a5c3b;
+    padding: 14px 20px;
+    margin: 16px 0;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.8;
+  }
+  .blockquote strong { color: #0f3d23; }
+  .alert-red {
+    background: #fff5f5;
+    border-left: 4px solid #c0392b;
+    padding: 12px 20px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #c0392b;
+    font-weight: bold;
+  }
+
+  /* ===== 发展空间图 ===== */
+  .growth-timeline {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 30px;
+  }
+  .growth-timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px; top: 10px; bottom: 10px;
+    width: 2px;
+    background: linear-gradient(#1a5c3b, #6db890);
+  }
+  .growth-item {
+    position: relative;
+    margin-bottom: 24px;
+    padding: 16px 20px;
+    background: #fff;
+    border: 1px solid #dde;
+    border-left: 3px solid #1a5c3b;
+  }
+  .growth-item::before {
+    content: "";
+    position: absolute;
+    left: -24px; top: 18px;
+    width: 12px; height: 12px;
+    background: #1a5c3b;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #1a5c3b;
+  }
+  .growth-item.phase2 { border-left-color: #2d7a50; }
+  .growth-item.phase2::before { background: #2d7a50; box-shadow: 0 0 0 2px #2d7a50; }
+  .growth-item.phase3 { border-left-color: #4a9e6e; }
+  .growth-item.phase3::before { background: #4a9e6e; box-shadow: 0 0 0 2px #4a9e6e; }
+  .growth-item.phase4 { border-left-color: #d4a017; }
+  .growth-item.phase4::before { background: #d4a017; box-shadow: 0 0 0 2px #d4a017; }
+  .growth-item h4 { font-size: 14px; font-weight: bold; color: #0f3d23; margin-bottom: 6px; }
+  .growth-item .period { font-size: 11px; color: #999; margin-bottom: 8px; letter-spacing: 1px; }
+  .growth-item p { font-size: 13px; color: #555; line-height: 1.7; }
+  .growth-item .goal { font-weight: bold; color: #1a5c3b; font-size: 13px; margin-top: 8px; }
+
+  /* ===== 页脚 ===== */
+  .page-footer {
+    background: #0f3d23;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+  }
+  .page-footer strong { color: rgba(255,255,255,0.9); }
+
+  /* ===== 响应式 ===== */
+  @media (max-width: 680px) {
+    .card-grid { grid-template-columns: 1fr; }
+    .card-grid-2 { grid-template-columns: 1fr; }
+    .steps { flex-direction: column; }
+    .step-item::after { display: none; }
+    .profit-grid { grid-template-columns: 1fr; }
+    .path-grid { grid-template-columns: 1fr; }
+    .highlight-row { flex-wrap: wrap; }
+    .cover h1 { font-size: 30px; }
+    .content { padding: 0 20px 40px; }
+    .cover { padding: 50px 24px 40px; }
+  }
+
+  /* ===== 打印 ===== */
+  @media print {
+    .watermark-layer span { color: rgba(26,92,59,0.06); }
+    body { background: #fff; }
+    .page { box-shadow: none; }
+  }
+
+  hr.section-divider {
+    border: none;
+    border-top: 1px dashed #d0e6d8;
+    margin: 30px 0;
+  }
+  .tag-inline {
+    display: inline-block;
+    background: #e8f3ed;
+    color: #1a5c3b;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-right: 4px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<!-- 水印层 -->
+<div class="watermark-layer" id="wm"></div>
+<script>
+(function(){
+  var wm = document.getElementById('wm');
+  var texts = ['四川丰火传媒', 'FENGHO MEDIA', '相如满庭芳', '商业企划书'];
+  for(var y=0; y<2200; y+=160){
+    for(var x=-100; x<1100; x+=260){
+      var span = document.createElement('span');
+      span.textContent = texts[Math.floor(Math.random()*texts.length)];
+      span.style.left = x + 'px';
+      span.style.top = y + 'px';
+      wm.appendChild(span);
+    }
+  }
+})();
+</script>
+
+<div class="page">
+
+  <!-- ===== 封面 ===== -->
+  <div class="cover">
+    <div class="cover-tag">BUSINESS PROPOSAL · 2026</div>
+    <h1>相如满庭芳</h1>
+    <div class="sub-brand">养生茶火锅 · 品牌启动商业企划书</div>
+    <div class="cover-divider"></div>
+    <div class="cover-desc">
+      基于2026年4月23日专项会议共识 · 丰火传媒营销视角<br>
+      从0到1全链路品牌孵化方案 · V1.0
+    </div>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <strong>策划出品</strong>
+        四川丰火传媒有限公司
+      </div>
+      <div class="cover-meta-item">
+        <strong>方案日期</strong>
+        2026年4月24日
+      </div>
+      <div class="cover-meta-item">
+        <strong>报告版本</strong>
+        V1.0 · 提案稿
+      </div>
+      <div class="cover-meta-item">
+        <strong>适用阶段</strong>
+        品牌启动期（0→1）
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 出品公司介绍 ===== -->
+  <div class="company-banner">
+    <h2>OUT PRODUCER · 策划出品方</h2>
+    <div class="company-name">四川丰火传媒有限公司</div>
+    <p>
+      四川丰火传媒有限公司（Fengho Media）是立足成都、深耕西南的品牌营销与连锁餐饮运营服务机构。公司以"品效合一"为核心理念，深度聚焦连锁餐饮、消费品牌及文旅业态的从0到1孵化与规模化增长，具备品牌策划、VI设计协同、线上运营、私域流量搭建、加盟管理SOP设计等全链路服务能力。
+    </p>
+    <p style="margin-top:8px;">
+      在本项目中，丰火传媒以营销合作方身份深度参与，负责品牌策划顶层设计、美团/大众点评/小红书等主流平台连锁体系搭建、线上运营全链路推进及加盟扩张流量体系建设，为相如满庭芳品牌的从0到1提供系统性市场化支撑。
+    </p>
+    <div class="company-tags">
+      <span>品牌策划</span>
+      <span>连锁运营</span>
+      <span>线上营销</span>
+      <span>美团/点评体系</span>
+      <span>小红书种草</span>
+      <span>加盟管理SOP</span>
+      <span>供应链对接</span>
+      <span>投流推广</span>
+    </div>
+  </div>
+
+  <!-- ===== 正文 ===== -->
+  <div class="content">
+
+    <!-- 一、项目概况 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">一</div>
+        <div class="section-title">
+          项目概况
+          <small>PROJECT OVERVIEW</small>
+        </div>
+      </div>
+
+      <table class="info-table">
+        <tr><th>品牌名称</th><td><strong>相如满庭芳</strong>（养生茶火锅）</td></tr>
+        <tr><th>商标状态</th><td>已注册43类餐饮商标，知识产权完备</td></tr>
+        <tr><th>核心定位</th><td>"茶空间 + 养生餐饮"复合业态，茶文化×火锅×健康生活方式</td></tr>
+        <tr><th>核心产品</th><td>养生茶火锅（底料研发完成，待标准化生产落地）</td></tr>
+        <tr><th>母体资源</th><td>"华夏茶艺"体系（学校+公司+研究院），近100家分校网络，政府授权"高技能人才培训基地"</td></tr>
+        <tr><th>项目阶段</th><td><span class="tag-inline">准备启动</span> 寻求从0到1市场化突破的关键节点</td></tr>
+        <tr><th>参与方</th><td>万老师团队（品牌方）· 张老师（顾问）· 设计王老师（空间/VI）· 丰火传媒/卓一航（营销方）</td></tr>
+      </table>
+
+      <div class="highlight-row">
+        <div class="highlight-item">
+          <div class="hl-num">43类</div>
+          <div class="hl-label">商标已注册</div>
+        </div>
+        <div class="highlight-item">
+          <div class="hl-num">~100家</div>
+          <div class="hl-label">茶艺分校网络</div>
+        </div>
+        <div class="highlight-item">
+          <div class="hl-num">5家</div>
+          <div class="hl-label">连锁认证目标门店数</div>
+        </div>
+        <div class="highlight-item">
+          <div class="hl-num">Q3 2026</div>
+          <div class="hl-label">目标完成品牌闭环</div>
+        </div>
+        <div class="highlight-item">
+          <div class="hl-num">4步走</div>
+          <div class="hl-label">市场启动策略</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 二、项目深度认知 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">二</div>
+        <div class="section-title">
+          项目深度认知
+          <small>SITUATION ANALYSIS</small>
+        </div>
+      </div>
+
+      <div class="subsection"><h3>2.1 核心优势</h3></div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-title">行业背书</div>
+          <ul>
+            <li>"华夏茶艺"行业"黄埔军校"声誉</li>
+            <li>政府授权"高技能人才培训基地"</li>
+            <li>茶艺师培训权威机构，专业公信力强</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">渠道网络</div>
+          <ul>
+            <li>成熟茶艺师培训网络（近100家分校）</li>
+            <li>完整茶产业链上下游资源</li>
+            <li>覆盖全国的学员校友资源池</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">品牌愿景</div>
+          <ul>
+            <li>全国性连锁品牌</li>
+            <li>融合高品质茶饮+茶文化教学</li>
+            <li>养生茶火锅+社交体验综合业态</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection"><h3>2.2 当前现状</h3></div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-title" style="color:#555;">已完成</div>
+          <ul>
+            <li>品牌命名及商标注册落位</li>
+            <li>核心产品"养生茶火锅"研发完成</li>
+            <li>初步团队搭建与资源整合</li>
+          </ul>
+        </div>
+        <div class="card card-warning">
+          <div class="card-title">待突破</div>
+          <ul>
+            <li>供应链标准化生产尚未启动</li>
+            <li>品牌VI系统及空间设计未定型</li>
+            <li>线上运营能力体系几乎空白</li>
+          </ul>
+        </div>
+        <div class="card card-accent">
+          <div class="card-title">优势认知</div>
+          <ul>
+            <li>强在专业背书与资源禀赋</li>
+            <li>弱在现代商业运营与数字营销</li>
+            <li>正是引入专业营销团队的最佳时机</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection"><h3>2.3 关键瓶颈与机会点</h3></div>
+      <table class="action-table">
+        <thead>
+          <tr>
+            <th style="width:15%;">瓶颈领域</th>
+            <th style="width:42%;">具体问题</th>
+            <th style="width:43%;">丰火传媒的介入机会</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>产品供应链</strong></td>
+            <td>茶火锅底料需标准化生产，仓储及大平台渠道入驻尚未推进</td>
+            <td>已对接专业工厂（鸿社麻辣烫创始人），可即刻启动代工谈判，建议以"商贸公司"形式统一供应链，走一道账形成稳定利润点</td>
+          </tr>
+          <tr>
+            <td><strong>品牌视觉空间</strong></td>
+            <td>品牌VI系统及标杆店空间设计尚未定型，无法支撑连锁形象</td>
+            <td>已链接设计王老师，可快速启动VI与空间设计，围绕"茶+养生+空间体验"方向推进</td>
+          </tr>
+          <tr>
+            <td><strong>线上运营营销</strong></td>
+            <td>缺乏美团/大众点评、小红书、抖音等体系化线上运营能力</td>
+            <td>丰火传媒提供全链路营销服务，重点布局小红书（种草逻辑与客资收集高度匹配）</td>
+          </tr>
+          <tr>
+            <td><strong>连锁化路径</strong></td>
+            <td>平台连锁认证门槛、加盟模式、单店盈利模型不明确</td>
+            <td>基于前美团连锁部门经验，已梳理清晰两条认证路径，可立即指导推进</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 三、解决方案与策略建议 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">三</div>
+        <div class="section-title">
+          解决方案与策略建议
+          <small>SOLUTION &amp; STRATEGY</small>
+        </div>
+      </div>
+
+      <div class="subsection"><h3>3.1 平台连锁认证路径 — 两条路径，立即行动</h3></div>
+      <div class="path-grid">
+        <div class="path-card recommend">
+          <span class="recommend-badge">主推路径</span>
+          <h4>路径A：纯新品牌申请</h4>
+          <ul>
+            <li>以"相如满庭芳"独立品牌直接申请</li>
+            <li>条件：品牌名下拥有5家以上正在营业、招牌统一的门店</li>
+            <li>窗口期：平台（美团）有固定窗口期，下一轮预计2026年下半年</li>
+            <li>目标：快速开设/改造首批5～20家门店</li>
+          </ul>
+          <p style="margin-top:10px;color:#1a5c3b;font-weight:bold;">✓ 品牌独立，长期价值最大化</p>
+        </div>
+        <div class="path-card">
+          <h4>路径B：子品牌挂靠</h4>
+          <ul>
+            <li>以"华夏茶艺"为母品牌进行子品牌认证</li>
+            <li>条件：出具股权关系证明，流程相对复杂</li>
+            <li>将"相如满庭芳"作为子品牌并入华夏茶艺体系</li>
+            <li>可利用母品牌已有门店基数，节省初期时间</li>
+          </ul>
+          <p style="margin-top:10px;color:#999;">备选方案，适合时间紧迫情形</p>
+        </div>
+      </div>
+      <div class="alert-red">
+        【丰火传媒建议】立即按"路径A"启动，力争在2026年下半年窗口期完成申报。加速首批5家门店落地是当务之急。
+      </div>
+
+      <div class="subsection"><h3>3.2 四步市场启动策略 — 稳扎稳打</h3></div>
+      <div class="steps">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <h4>单店模型验证</h4>
+          <p>集中资源打造1-2家标杆旗舰店，跑通"夫妻店"轻运营模式，验证人效、坪效与单店盈利模型</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <h4>品牌系统定型</h4>
+          <p>协同设计王老师完成品牌VI系统及首店空间设计，确保线上线下视觉统一、可复制</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <h4>线上体系搭建</h4>
+          <p>建立各平台企业号（蓝V），重点布局小红书（种草+客资收集）、美团/大众点评（交易闭环）</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <h4>规模化营销复制</h4>
+          <p>前三步固稳后开始规模化广告投流，放大生意。营销是锦上添花，非雪中送炭</p>
+        </div>
+      </div>
+
+      <div class="subsection"><h3>3.3 资源对接与商务模式</h3></div>
+      <div class="card-grid-2">
+        <div class="card">
+          <div class="card-title">供应链方案</div>
+          <ul>
+            <li>已对接专业火锅底料工厂（"鸿社麻辣烫"创始人）</li>
+            <li>可提供研发、生产及仓储一站式解决方案</li>
+            <li>建议以"商贸公司"形式统一供应链管理</li>
+            <li>走一道账，形成稳定利润点</li>
+            <li>后期可入驻朴朴/盒马等渠道拓宽销售</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">营销服务分层体系</div>
+          <ul>
+            <li><strong>普通门店：</strong>标准化模板 + 产品供应</li>
+            <li><strong>有实力加盟商：</strong>"品牌+技术+供应链+运营"深度赋能</li>
+            <li>丰火传媒提供：品牌策划 → 线上运营 → 广告投流 全链路服务</li>
+            <li>加盟管理SOP体系设计支持</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 四、盈利模式 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">四</div>
+        <div class="section-title">
+          盈利模式设计
+          <small>PROFIT MODEL</small>
+        </div>
+      </div>
+
+      <div class="blockquote">
+        <strong>核心逻辑：</strong>相如满庭芳品牌的盈利闭环由"餐饮堂食 + 供应链分润 + 加盟授权 + 茶文化衍生"四大收入支柱构成，在单店盈利模型验证后，通过连锁化放大规模效益，最终形成"品牌溢价 × 规模复制 × 生态变现"的完整商业闭环。
+      </div>
+
+      <div class="profit-grid">
+        <div class="profit-card" data-icon="🍲">
+          <div class="profit-title">收入来源 01 · 餐饮堂食营收</div>
+          <div class="profit-amount">主营业务</div>
+          <ul>
+            <li>养生茶火锅人均客单价目标：80～150元</li>
+            <li>标准门店面积60～120㎡，轻运营"夫妻店"模式</li>
+            <li>桌均翻台率目标：2.5～3次/天</li>
+            <li>月营收目标（单店）：15～25万元</li>
+          </ul>
+        </div>
+        <div class="profit-card" data-icon="📦">
+          <div class="profit-title">收入来源 02 · 供应链分润</div>
+          <div class="profit-amount">稳定利润点</div>
+          <ul>
+            <li>茶火锅底料标准化生产，成本可控</li>
+            <li>以"商贸公司"统一采购，赚取渠道差价</li>
+            <li>面向加盟门店统一供货，形成稳定收益</li>
+            <li>后期入驻朴朴/盒马等平台扩大销售规模</li>
+          </ul>
+        </div>
+        <div class="profit-card light" data-icon="🏪">
+          <div class="profit-title">收入来源 03 · 加盟授权收益</div>
+          <div class="profit-amount">规模化引擎</div>
+          <ul>
+            <li>加盟费：一次性品牌授权费（定价待定）</li>
+            <li>管理费：年度运营服务费/流水抽成</li>
+            <li>利用华夏茶艺近100家分校网络优先转化</li>
+            <li>培训学员资源池转化为意向加盟商</li>
+          </ul>
+        </div>
+        <div class="profit-card light" data-icon="🍵">
+          <div class="profit-title">收入来源 04 · 茶文化衍生业务</div>
+          <div class="profit-amount">品牌溢价层</div>
+          <ul>
+            <li>门店茶艺课程、品茶体验、茶叶零售</li>
+            <li>私人定制茶宴、团建包场、企业接待</li>
+            <li>与华夏茶艺联动：培训+餐饮双业态互导流量</li>
+            <li>节日礼盒、茶器周边产品零售</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection"><h3>单店盈利模型测算（参考标准）</h3></div>
+      <table class="action-table">
+        <thead>
+          <tr>
+            <th>科目</th>
+            <th>参数假设</th>
+            <th>月度预估（元）</th>
+            <th>备注</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>营业收入</strong></td>
+            <td>日翻台2.5次×15桌×客单100元×30天</td>
+            <td><strong>112,500</strong></td>
+            <td>轻运营60㎡小店模型</td>
+          </tr>
+          <tr>
+            <td>食材成本</td>
+            <td>营业额×35%（含底料供应链）</td>
+            <td>-39,375</td>
+            <td>底料标准化后可降至30%</td>
+          </tr>
+          <tr>
+            <td>租金成本</td>
+            <td>社区街边店</td>
+            <td>-10,000</td>
+            <td>选址策略：次级商圈降低租金</td>
+          </tr>
+          <tr>
+            <td>人工成本</td>
+            <td>2～3人（夫妻店模式）</td>
+            <td>-12,000</td>
+            <td>轻运营核心优势</td>
+          </tr>
+          <tr>
+            <td>运营杂费</td>
+            <td>水电/耗材/包装等</td>
+            <td>-6,000</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong style="color:#1a5c3b;">税前利润</strong></td>
+            <td></td>
+            <td><strong style="color:#1a5c3b;font-size:15px;">45,125</strong></td>
+            <td><strong style="color:#1a5c3b;">利润率约40%，达到健康水位</strong></td>
+          </tr>
+          <tr>
+            <td>投资回收期</td>
+            <td>装修+设备首次投入约30～50万</td>
+            <td colspan="2"><strong style="color:#1a5c3b;">预计8～12个月回本</strong>（行业优秀水平）</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="blockquote" style="margin-top:12px;">
+        <strong>注：</strong>以上数据为测算参考，实际运营需通过首批1-2家标杆店进行真实数据校验后，形成加盟手册标准模型。
+      </div>
+    </div>
+
+    <!-- 五、发展空间与品牌愿景 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">五</div>
+        <div class="section-title">
+          发展空间与品牌愿景
+          <small>GROWTH VISION</small>
+        </div>
+      </div>
+
+      <div class="blockquote">
+        <strong>市场背景：</strong>养生健康餐饮赛道近年持续高增，"茶文化+餐饮"复合业态尚无全国性头部品牌，相如满庭芳具备先发优势与差异化壁垒，极具规模化潜力。
+      </div>
+
+      <div class="growth-timeline">
+        <div class="growth-item">
+          <h4>第一阶段：单店模型验证期</h4>
+          <div class="period">2026年Q2～Q3（约3个月）</div>
+          <p>集中资源于1-2家标杆门店，完成"夫妻店"轻运营模式验证，打磨产品出品标准、服务流程与盈利模型数据，产出可复制的运营SOP手册。</p>
+          <p class="goal">阶段目标：单店月流水稳定超10万，利润率≥35%，形成可输出的运营范本</p>
+        </div>
+        <div class="growth-item phase2">
+          <h4>第二阶段：品牌系统定型与连锁认证</h4>
+          <div class="period">2026年Q3（约2个月）</div>
+          <p>完成品牌VI系统定型、首店空间设计落地；同步拓展至5家以上门店，完成美团等平台连锁品牌库申报，获取平台流量支持与品牌加持。</p>
+          <p class="goal">阶段目标：5家门店稳定运营，成功入驻美团/大众点评连锁品牌库</p>
+        </div>
+        <div class="growth-item phase3">
+          <h4>第三阶段：区域规模化扩张</h4>
+          <div class="period">2026年Q4～2027年Q2（约6个月）</div>
+          <p>以成都为核心，向四川省内二三线城市扩张；正式开放加盟，利用华夏茶艺近100家分校网络，优先向在读学员、校友群体招募首批意向加盟商，实现低成本快速扩张。</p>
+          <p class="goal">阶段目标：省内门店突破20家，加盟体系正式运转</p>
+        </div>
+        <div class="growth-item phase4">
+          <h4>第四阶段：全国连锁品牌化</h4>
+          <div class="period">2027年下半年起</div>
+          <p>建立中央厨房/供应链中台，依托成熟加盟体系，向西南、华南、华中等区域扩张；打通线上零售渠道（底料电商、礼盒），形成"餐饮+零售+培训"三位一体的品牌生态。目标成为"茶文化+养生餐饮"全国性头部连锁品牌。</p>
+          <p class="goal">阶段目标：全国门店100+，品牌估值突破亿元级，启动资本化路径</p>
+        </div>
+      </div>
+
+      <div class="subsection"><h3>市场空间测算（参考）</h3></div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-title">赛道规模</div>
+          <p>中国火锅市场年规模超5000亿元，养生健康细分赛道占比持续提升，"茶文化餐饮"已被资本机构列为2025-2027重点关注赛道之一。</p>
+        </div>
+        <div class="card">
+          <div class="card-title">竞争格局</div>
+          <p>目前"茶+火锅"业态尚无全国性头部品牌，市场高度分散，相如满庭芳凭借华夏茶艺专业背书，具备强差异化与先发卡位优势。</p>
+        </div>
+        <div class="card">
+          <div class="card-title">潜在盈利规模</div>
+          <p>若实现100家门店规模，按单店年利润50万计算，品牌年利润池可达5000万+，加上供应链分润、加盟费收入，整体盈利空间巨大。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 六、后续行动清单 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">六</div>
+        <div class="section-title">
+          后续行动清单
+          <small>ACTION ITEMS</small>
+        </div>
+      </div>
+
+      <table class="action-table">
+        <thead>
+          <tr>
+            <th style="width:5%;">#</th>
+            <th style="width:18%;">事项</th>
+            <th style="width:37%;">核心内容</th>
+            <th style="width:22%;">建议主导方</th>
+            <th style="width:10%;">时限</th>
+            <th style="width:8%;">优先级</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><strong>供应链落地</strong></td>
+            <td>与鸿社工厂确定底料配方、包装、成本及供货协议；同步推进朴朴/盒马等渠道入驻</td>
+            <td>万老师团队 + 丰火传媒</td>
+            <td>2周内</td>
+            <td><span class="priority-tag p-highest">最高</span></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>品牌VI与空间设计</strong></td>
+            <td>启动"相如满庭芳"品牌VI系统；设计王老师主导首家标杆店空间设计方案，围绕"茶+养生+体验"方向推进</td>
+            <td>万老师团队 + 设计王老师</td>
+            <td>3周内初稿</td>
+            <td><span class="priority-tag p-highest">高</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>首店选址与模型</strong></td>
+            <td>确定1-2家标杆店选址，明确"夫妻店"轻运营模式与投入产出测算，建立完整单店盈利模型数据</td>
+            <td>万老师团队 + 丰火传媒</td>
+            <td>1个月内</td>
+            <td><span class="priority-tag p-highest">高</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>线上基础搭建</strong></td>
+            <td>完成美团、大众点评、小红书企业号注册与认证，搭建基础页面与内容规划，启动首批种草内容</td>
+            <td>丰火传媒（运营）</td>
+            <td>2周内</td>
+            <td><span class="priority-tag p-highest">高</span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong>连锁路径确认</strong></td>
+            <td>确定首批5家门店拓展方式（直营/改造/加盟），明确连锁认证申报主体与时间节点</td>
+            <td>万老师团队（战略）</td>
+            <td>1周内</td>
+            <td><span class="priority-tag p-medium">高</span></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><strong>工作群与沟通机制</strong></td>
+            <td>成立包含各方核心成员的微信工作群，建立每周进展同步机制，确保信息对齐</td>
+            <td>各方共同</td>
+            <td>立即</td>
+            <td><span class="priority-tag p-high">中</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 七、项目甘特图 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">七</div>
+        <div class="section-title">
+          项目执行甘特图
+          <small>GANTT CHART · 2026年Q2-Q4</small>
+        </div>
+      </div>
+
+      <div class="gantt-wrap">
+        <table class="gantt-table">
+          <thead>
+            <tr>
+              <th class="task-col" rowspan="2">任务项目</th>
+              <th colspan="4" class="month-header">5月</th>
+              <th colspan="4" class="month-header">6月</th>
+              <th colspan="4" class="month-header">7月</th>
+              <th colspan="4" class="month-header">8月</th>
+              <th colspan="4" class="month-header">9月</th>
+              <th colspan="4" class="month-header">10月</th>
+            </tr>
+            <tr>
+              <th class="week-header">W1</th><th class="week-header">W2</th><th class="week-header">W3</th><th class="week-header">W4</th>
+              <th class="week-header">W1</th><th class="week-header">W2</th><th class="week-header">W3</th><th class="week-header">W4</th>
+              <th class="week-header">W1</th><th class="week-header">W2</th><th class="week-header">W3</th><th class="week-header">W4</th>
+              <th class="week-header">W1</th><th class="week-header">W2</th><th class="week-header">W3</th><th class="week-header">W4</th>
+              <th class="week-header">W1</th><th class="week-header">W2</th><th class="week-header">W3</th><th class="week-header">W4</th>
+              <th class="week-header">W1</th><th class="week-header">W2</th><th class="week-header">W3</th><th class="week-header">W4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 阶段一标题 -->
+            <tr class="phase-row">
+              <td colspan="25">阶段一：基础建设期（5月～6月）</td>
+            </tr>
+            <!-- 任务行 -->
+            <tr>
+              <td class="task-name">1. 供应链合同落地</td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="task-name">2. 品牌VI系统启动</td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="task-name">3. 线上账号注册认证</td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="task-name">4. 连锁路径策略确认</td>
+              <td style="background:#d4a017;"></td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <!-- 阶段二标题 -->
+            <tr class="phase-row">
+              <td colspan="25">阶段二：首店建设与模型验证（5月下旬～7月）</td>
+            </tr>
+            <tr>
+              <td class="task-name">5. 首店选址评估</td>
+              <td></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="task-name">6. 空间设计定稿</td>
+              <td></td><td></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="task-name">7. 首店装修施工</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="task-name">8. 员工招募/培训</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+              <td style="background:#4a9e6e;"></td>
+              <td style="background:#4a9e6e;"></td>
+              <td style="background:#4a9e6e;"></td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <!-- 关键节点 -->
+            <tr>
+              <td class="task-name" style="color:#c0392b;font-weight:bold;">★ 首店正式开业</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td>
+              <td style="background:#c0392b;"></td>
+              <td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <!-- 阶段三标题 -->
+            <tr class="phase-row">
+              <td colspan="25">阶段三：品牌推广与连锁认证（7月～9月）</td>
+            </tr>
+            <tr>
+              <td class="task-name">9. 小红书内容种草启动</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+            </tr>
+            <tr>
+              <td class="task-name">10. 单店盈利模型测试</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+              <td style="background:#4a9e6e;"></td>
+              <td style="background:#4a9e6e;"></td>
+              <td style="background:#4a9e6e;"></td>
+              <td style="background:#4a9e6e;"></td>
+              <td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="task-name">11. 拓展至5家门店</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <!-- 关键节点 -->
+            <tr>
+              <td class="task-name" style="color:#c0392b;font-weight:bold;">★ 美团连锁认证申报</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td>
+              <td style="background:#c0392b;"></td>
+              <td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+            </tr>
+            <!-- 阶段四标题 -->
+            <tr class="phase-row">
+              <td colspan="25">阶段四：规模化扩张准备（9月～10月）</td>
+            </tr>
+            <tr>
+              <td class="task-name">12. 加盟体系SOP建立</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td style="background:#d4a017;"></td>
+              <td style="background:#d4a017;"></td>
+              <td style="background:#d4a017;"></td>
+              <td style="background:#d4a017;"></td>
+              <td style="background:#e8c355;"></td>
+              <td style="background:#e8c355;"></td>
+              <td style="background:#e8c355;"></td>
+              <td style="background:#e8c355;"></td>
+            </tr>
+            <tr>
+              <td class="task-name">13. 广告投流规模化</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#2d7a50;"></td>
+              <td style="background:#1a5c3b;"></td>
+              <td style="background:#1a5c3b;"></td>
+            </tr>
+            <!-- 关键节点 -->
+            <tr>
+              <td class="task-name" style="color:#c0392b;font-weight:bold;">★ 品牌0→1闭环完成</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td>
+              <td style="background:#c0392b;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 甘特图图例 -->
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:11px;color:#666;">
+        <span><span style="display:inline-block;width:14px;height:10px;background:#1a5c3b;margin-right:4px;vertical-align:middle;"></span>执行中/重点任务</span>
+        <span><span style="display:inline-block;width:14px;height:10px;background:#2d7a50;margin-right:4px;vertical-align:middle;"></span>准备/推进阶段</span>
+        <span><span style="display:inline-block;width:14px;height:10px;background:#4a9e6e;margin-right:4px;vertical-align:middle;"></span>测试验证阶段</span>
+        <span><span style="display:inline-block;width:14px;height:10px;background:#d4a017;margin-right:4px;vertical-align:middle;"></span>加盟/扩张规划</span>
+        <span><span style="display:inline-block;width:14px;height:10px;background:#c0392b;margin-right:4px;vertical-align:middle;"></span>关键里程碑节点</span>
+      </div>
+    </div>
+
+    <!-- 八、下一步推进建议 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">八</div>
+        <div class="section-title">
+          下一步推进建议
+          <small>NEXT STEPS</small>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-title">立即成立专项小组</div>
+          <p>建立包含各方核心成员的微信工作群，每周同步进展。建议参与方：万老师团队、张老师、设计王老师、丰火传媒/卓一航。</p>
+        </div>
+        <div class="card">
+          <div class="card-title">下次会议聚焦三项</div>
+          <ul>
+            <li>供应链合作框架协议确认</li>
+            <li>VI设计方向确认（设计王老师主导）</li>
+            <li>首店选址标准与路径决策</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">方案交付承诺</div>
+          <p>丰火传媒将在本次提案确认后3个工作日内提供<strong>《相如满庭芳品牌启动整体运营方案V1.0》</strong>，含阶段目标、时间节点与分工预算。</p>
+        </div>
+      </div>
+
+      <div class="alert-red" style="margin-top:24px;background:#fff9f0;border-color:#d4a017;color:#8a5a00;">
+        总结：项目已进入执行攻坚期，需在<strong style="color:#8a5a00;">供应链、视觉、首店模型</strong>三个关键点上快速突破。建议各方紧密协同，按上述清单推进，力争在2026年第三季度完成品牌从0到1的闭环验证。
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- ===== 页脚 ===== -->
+  <div class="page-footer">
+    <strong>四川丰火传媒有限公司（Fengho Media）</strong><br>
+    本文件为商业提案，内容保密，仅供相关合作方阅览 · 2026年4月<br>
+    策划：丰火传媒 · 卓一航  |  设计协同：设计王老师  |  品牌方：万老师团队
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
